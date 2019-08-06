@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText":"世界名校Offter大作战",
+    "usingComponents":{
+        "getPhoneBtn":"/pages/component/getPhoneBtn/index"
+    }
+}

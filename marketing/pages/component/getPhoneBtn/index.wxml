@@ -1,0 +1,6 @@
+<button wx:if="{{flg}}" class="cls" bindtap="sucCb">
+  <slot></slot>
+</button>
+<button wx:else class="cls" type="primary" open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="getPhoneNumber">
+  <slot></slot>
+</button>

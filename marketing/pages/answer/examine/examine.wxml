@@ -1,0 +1,27 @@
+<view class="examine">
+    <block wx:for="{{items}}" wx:key="index">
+        <view style="display:{{index == num ? 'block' : 'none'}}">
+            <view class="banner">
+                <image class="logo" src="{{imgUrl}}logo_ju.png"></image>
+                <image class="banner-img" src="{{imgUrl}}{{item.img}}"></image>
+            </view>
+            <view class="question">
+                {{item.question}}
+            </view>
+            <view class="answer">
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio"  wx:for="{{item.answer}}" wx:key="index">
+                        <radio value="{{item.name}}" checked="{{item.checked}}"/>
+                        {{item.value}}
+                    </label>
+                </radio-group>
+            </view>
+            <view class="operation">
+                <button class="prev" bindtap="prev">上一题</button>
+                <text class="progress">已完成<text>{{progress}}</text>%</text>
+                <button wx:if="{{canSubmit}}" class="next" bindtap="submit">完成</button>
+                <button wx:else class="next" bindtap="next">下一题</button>
+            </view>
+        </view>
+    </block>
+</view>

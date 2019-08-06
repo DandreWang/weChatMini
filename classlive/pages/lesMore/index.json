@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "热门精选",
+  "usingComponents":{
+    "list":"/pages/component/list/list"
+  }
+}

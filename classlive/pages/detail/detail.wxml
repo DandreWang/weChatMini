@@ -1,0 +1,18 @@
+<view id="detail">
+  <view class="head">
+    <image src="{{detailData.image}}" model="cover"></image>
+    <view class="foucs">
+      <text>{{detailData.initClick>999999? '999999+' : detailData.initClick}}人关注</text>
+    </view>
+    <button class="share" open-type="share">
+      <image src="{{imgUrl}}public/share.png" model="cover"></image>
+    </button>
+  </view>
+  <view class="course">{{detailData.title}}</view>
+  <view class="courseDetail">{{detailData.des}}</view>
+  <view class="btnWrap" style="bottom: {{isIphoneX ? '68rpx' : '0'}}">
+    <view class="btn {{detailData.isOver ? 'disbtn' : ''}}" bindtap="jump">
+      进入直播间
+    </view>
+  </view>
+</view>

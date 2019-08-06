@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "趣味测试",
+  "usingComponents":{
+    "list":"/pages/component/list/list"
+  }
+}

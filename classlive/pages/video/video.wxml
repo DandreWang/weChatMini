@@ -1,0 +1,53 @@
+<!--pages/video/video.wxml-->
+<view class="video">
+    <view
+        class="{{act === tit.id ? 'act' : ''}}"
+        wx:for="{{tits}}"
+        wx:key="id"
+        wx:for-index="idx"
+        wx:for-item="tit"
+        hidden="{{tit.hide}}"
+    >
+        <view class="list-box" data-type="{{tit.id}}" bindtap="actItem">
+            <view class="left">
+                <image src="{{imgUrl}}vioItem2.png" class="list-icon"></image>
+                {{tit.name}}
+            </view>
+            <image src="{{imgUrl}}arrowright.png" class="list-right"></image>
+        </view>
+        <view class="list-con">
+            <view class="item_li"
+                wx:for="{{tit.children}}"
+                wx:key="id"
+                wx:for-index="index"
+                wx:for-item="li"
+                data-id="{{li.id}}"
+                data-src="{{li.image}}"
+                bindtap="jump"
+            >
+                <view class="item_left">
+                    <text class="item_title">{{li.title}}</text>
+                    <text class="item_cont">{{li.des}}</text>
+                    <view>
+                        <text class="item_attention">{{li.initClick>999999? '999999+' : li.initClick}}关注</text>
+                    </view>
+                </view>
+                <view class="item_right">
+                    <image src="{{li.videoImage}}"></image>
+                </view>
+            </view>
+            <view class="empItem" style="display: {{tit.children.length ? 'none' : 'flex'}}">
+                <image src="{{imgUrl}}emp.png" class="empImg"/>暂无视频
+            </view>
+            <view class="header" hidden="{{hideHeader}}">
+                <view>上拉加载中……</view>
+                <view>{{refreshTime}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="default" hidden="{{tits.length}}">
+        <image src="{{imgUrl}}暂无视频.png"></image>
+        <view>暂无视频</view>
+    </view>
+    <image class="backTop" src="{{imgUrl}}top.png" hidden="{{backFlg}}" bindtap="goTop"/>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/component/demo/dmeo.wxml-->
+
+<template name="item">
+  <text>222</text>
+</template>

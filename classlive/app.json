@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/welcome/welcome",
+    "pages/coupon/coupon",
+    "pages/person/person",
+    "pages/detail/detail",
+    "pages/record/record",
+    "pages/video/video",
+    "pages/lesMore/index",
+    "pages/examineMore/index",
+    "pages/chat/chat",
+    "pages/player/player",
+    "pages/web/web",
+    "pages/playrecord/playrecord",
+    "pages/feedback/feedback"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "菠萝在线",
+    "navigationBarTextStyle": "black",
+    "navigationBarFontSize": "72rpx"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FA8000",
+    "borderStyle": "black",
+    "backgroundColor": "#FFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/playrecord/playrecord",
+        "iconPath": "images/bf.png",
+        "selectedIconPath": "images/bf_selected.png",
+        "text": "进入微讲堂"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 50000,
+    "uploadFile": 50000,
+    "downloadFile": 50000
+  },
+  "navigateToMiniProgramAppIdList": ["wx70691410297a3d39"]
+}

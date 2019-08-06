@@ -1,0 +1,119 @@
+<view id="chat">
+  <view class="head">
+    <text class="zc">国际知名讲师 {{teacherData.userNickname}}</text>
+    <image class="teaImg" src="{{teacherData.images}}"></image>
+  </view>
+  <view class="bomBtn {{nid ? '' : 'hide'}}" bindtap="toBom">
+    <image class="bomImg" src="{{imgUrl + 'toBom.png'}}"></image>{{nMsgNum}}条新消息
+  </view>
+  <scroll-view
+    id="sv"
+    class="content"
+    lower-threshold="1"
+    scroll-y
+    bindscrolltolower="refresh"
+    bindscroll="handleScrollChange"
+    scroll-into-view="{{lastItem}}"
+    style="height: calc(100vh - {{isIphoneX ? actTab ? 514 : 266 : actTab ? 446 : 198}}rpx);"
+  >
+    <!--bindscrolltoupper="refresh"-->
+    <view id="chatContent" bindtouchstart="inpBlur">
+      <!--<view class="header" hidden="{{!refreshStatus}}">-->
+        <!--<view>下拉刷新中……</view>-->
+        <!--<view>{{refreshTime}}</view>-->
+      <!--</view>-->
+      <view class="{{adnote ? 'adnote' : 'hide'}}">
+        <view class="headTitle">
+          讲课须知
+          <image class="close" src="{{imgUrl}}close.png" bindtap="closeAd"></image>
+        </view>
+        <view class="adContent">
+          <view class="item" wx:for="{{note}}" wx:key="{{item}}">
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <block wx:for="{{newslist}}" wx:key="{{item.id}}">
+        <!--间隔大于5分钟-->
+        <view class="creatTime"
+              wx:if="{{index == 0 || item.createTime - newslist[index - 1].createTime > 5 * 60 * 1000}}">
+          {{item.time}}
+        </view>
+        <!--消息-->
+        <view id="msg{{item.createTime}}" class="msg {{item.userId === userId ? 'right' : 'left'}}">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.images}}" mode="cover"></image>
+          <view class="msgCon">
+            <view class="bg" wx:if="{{item.type == 0 || item.type == 1}}"
+                  style="background-image:url({{imgUrl}}spekQp{{item.userId === userId ? 'M' : 'T'}}.png);"></view>
+            <view class="userinfo-nickname">{{item.userNickname}}</view>
+            <view wx:if="{{item.type == 1}}" class='myLuYin'>
+              <!-- 当前正在播放状态 -->
+              <view class="audio" style="width: {{100 + item.dTime * 2}}rpx" bindtap="audioClick" data-id="{{item.createTime}}">
+                <image class="ico" src="{{imgUrl}}voice{{item.userId === userId ? 'M' : 'T'}}{{item.createTime == audioId ? 'g.gif' : '.png'}}"/>
+              </view>
+              <text class="yyTxt">{{item.dTime}}"</text>
+            </view>
+            <view wx:elif="{{item.type == 0}}" class="myMsg">
+              <text class="msgTxt">{{item.statement}}</text>
+            </view>
+            <image wx:elif="{{item.type == 2}}" class="myImg" src="{{item.statement}}" data-src="{{item.statement}}" bindtap="previewImage" mode="widthFix"></image>
+            <!--<video wx:elif="{{item.type == 3}}" class="myVideo" src="{{item.statement}}"></video>-->
+            <image wx:elif="{{item.type == 3}}" class="myVideo" src="{{imgUrl}}72_72.png" data-src="{{item.statement}}" bindtap="jump"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <!--tab栏 -->
+  <view class="tabbar" style="bottom:{{isIphoneX ? '68' : '0'}}rpx">
+    <view class="itemAll">
+      <block wx:if="{{isT || !speakStatus}}">
+        <view wx:for="{{tabber}}" wx:key="{{item.id}}" class="item" bindtap="kindToggle" data-id="{{item.id}}">
+          <image src="{{imgUrl}}{{item.id}}{{actTab === item.id ? '_selected' : ''}}.png"></image>
+        </view>
+      </block>
+      <text class="noSpeak" wx:elif="{{speakStatus}}">全员禁言</text>
+    </view>
+    <form class="wordForm" bindsubmit="getWordContent">
+      <view class="tabbar-by {{actTab ? 'show' : 'hide'}}">
+        <view class="speak" style="display:{{actTab === 'speak' ? 'flex' : 'none'}}">
+          <view class="speakTit">{{recording ? '松开 发送' : '按住 说话'}}</view>
+          <image
+            class="speakImg"
+            src="{{imgUrl}}speakBtn{{recording ? '_selected' : ''}}.png"
+            bindlongpress="handleRecordStart"
+            bindtouchend="handleRecordStop"
+            bindtouchmove="handleRecordMove"
+          ></image>
+        </view>
+        <view class="word" style="display:{{actTab ==='word' ? 'flex' : 'none'}}">
+          <textarea
+            class="weui-textarea"
+            name="textarea"
+            cols="30"
+            rows="10"
+            maxlength="500"
+            fixed
+            auto-height
+            value="{{textarea}}"
+            cursor-spacing="32rpx"
+            show-confirm-bar="{{false}}"
+          ></textarea>
+          <button class="sendMordBtn" form-type="submit">发送</button>
+        </view>
+        <view class="img" style="display:{{actTab === 'img' ? 'flex' : 'none'}}">
+          <view class="item" wx:for="{{imgBtn}}" wx:key="{{item.id}}" bindtap="choose{{item.id}}">
+            <image class="imgIcon" src="{{imgUrl}}img_{{item.id}}.png"></image>
+            <view class="imgTxt">{{item.word}}</view>
+          </view>
+        </view>
+        <view class="more" style="display:{{actTab === 'more' ? 'flex' : 'none'}}">
+          <text class="moreTxt">禁止全员发言/自由发言</text>
+          <switch checked="{{!speakStatus}}" bindchange="switchChange"></switch>
+        </view>
+      </view>
+    </form>
+  </view>
+  <view class="iphoneXbtn {{isIphoneX ? 'show' : 'hide'}}"></view>
+</view>
+  

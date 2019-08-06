@@ -1,0 +1,23 @@
+<view class="wrap">
+  <form class="form" bindsubmit="handleSubmit">
+    <textarea
+      class="txtCon"
+      name="content"
+      value="{{textarea}}"
+      show-confirm-bar="{{false}}"
+      placeholder-class="plhCls"
+      maxlength="300"
+      placeholder="请在此输入留言内容，我们会尽快与你联系(必填)"
+    />
+    <view class="rBox">
+      <text>姓名</text>
+      <input name="name" class="inp"/>
+    </view>
+    <view class="rBox">
+      <text>电话</text>
+      <input name="mobile" class="inp" type="number" placeholder="必填" placeholder-class="plhCls"/>
+    </view>
+    <button class="btn" form-type="submit">发 送</button>
+  </form>
+
+</view>

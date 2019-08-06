@@ -1,0 +1,21 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/index",
+        "pages/answer/index/index",
+        "pages/answer/examine/examine",
+        "pages/answer/school/school",
+        "pages/answer/form/form",
+        "pages/answer/share/share",
+        "pages/examSec/index/index",
+        "pages/examSec/examine/index",
+        "pages/examSec/result/index",
+        "pages/exams/examineMore/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "菠萝在线",
+        "navigationBarTextStyle": "black"
+    }
+}

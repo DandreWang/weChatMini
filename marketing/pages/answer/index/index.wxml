@@ -1,0 +1,8 @@
+<view class="answer">
+    <view class="answer-content" style="background-image:url({{imgUrl}}bg.png)">
+        <view class="logo"><image src="{{imgUrl}}logo_ju.png"></image></view>
+        <view class="text1"><image src="{{imgUrl}}wenzi1.png"></image></view>
+        <view class="text2"><image src="{{imgUrl}}wenzi2.png"></image></view>
+        <getPhoneBtn class="bomBtn" cls="start-text" success="{{goTest}}">立即开始测试</getPhoneBtn>
+    </view>
+</view>

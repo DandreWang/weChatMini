@@ -1,0 +1,98 @@
+.listWrap .mainView {
+  height: 100vh;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.listWrap .mainView .item_li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.listWrap .mainView .item_li .item_left {
+  min-height: 144rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100vw - 240rpx);
+}
+.listWrap .mainView .item_li .item_left .item_title {
+  font-size: 30rpx;
+  color: #191919;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+.listWrap .mainView .item_li .item_left .item_cont,
+.listWrap .mainView .item_li .item_left .item_attention {
+  font-size: 22rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.listWrap .mainView .item_li .item_left .item_bom {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+}
+.listWrap .mainView .item_li .item_left .item_bom .item_price {
+  font-size: 28rpx;
+  color: #FA8000;
+  margin-right: 24rpx;
+}
+.listWrap .mainView .item_li .smlImg {
+  flex-shrink: 0;
+  width: 144rpx;
+  height: 144rpx;
+}
+.listWrap .mainView .item_li:after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: scaleY(0.5);
+  background: rgba(226, 226, 226, 0.5);
+}
+.listWrap .mainView .ovrTxt {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin: 50rpx 0;
+}
+.listWrap .mainView .header {
+  font-size: 24rpx;
+  color: #b4b4b4;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.listWrap .empBox {
+  margin-top: 32vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.listWrap .empBox .empImg {
+  width: 325rpx;
+  height: 154rpx;
+}
+.listWrap .empBox .empTxt {
+  margin-top: 42rpx;
+  font-size: 30rpx;
+  color: #B4B4B4;
+}
+.listWrap .backTop {
+  position: fixed;
+  right: 50rpx;
+  bottom: 120rpx;
+  width: 140rpx;
+  height: 140rpx;
+}
+/*# sourceMappingURL=list.wxss.map */

@@ -1,0 +1,80 @@
+.examSec {
+  min-height: 100vh;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50rpx;
+}
+.examSec .title {
+  font-size: 40rpx;
+  font-weight: bold;
+  font-family: PingFangSC-Semibold;
+  margin-bottom: 40rpx;
+  margin-top: 64rpx;
+  color: #202C45;
+  width: 100%;
+}
+.examSec .list {
+  width: 100%;
+}
+.examSec .list .item {
+  background: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 10rpx 18rpx 0 rgba(104, 104, 104, 0.05);
+  border-radius: 4rpx;
+  color: #4D5460;
+  font-size: 36rpx;
+  letter-spacing: 2rpx;
+  font-family: PingFangSC-Regular;
+}
+.examSec .list .item.chk {
+  background: linear-gradient(to right, #FF8000, #FF2FC6);
+  color: #fff;
+}
+.examSec .num {
+  position: fixed;
+  bottom: 164rpx;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 36rpx;
+  color: #4D5460;
+}
+.examSec .num .ni {
+  color: #FF7400;
+}
+.examSec .bomBtns {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -10rpx 18rpx 0 rgba(104, 104, 104, 0.05);
+}
+.examSec .bomBtns .btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  font-weight: bold;
+}
+.examSec .bomBtns .preBtn {
+  background: #fff;
+  color: #202C45;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+}
+.examSec .bomBtns .preBtn.dis {
+  color: #E8E8E8;
+}
+.examSec .bomBtns .nextBtn {
+  color: #fff;
+  background: linear-gradient(to right, #FF8000, #FF2FC6);
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+}
+/*# sourceMappingURL=index.wxss.map */

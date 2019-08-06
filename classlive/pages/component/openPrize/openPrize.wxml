@@ -1,0 +1,11 @@
+<view class="openprize" style="display:{{box}}">
+    <view class="wrap">
+        <view class="box" style="background-image:url({{staticImg.openbg}});height:{{bgHeight}}px;margin-top:{{-bgHeight/2}}px">
+            <view class="inner">
+                <view>深呼吸，期待幸运降临!</view>
+                <view bindtap="openPrize" style="background-image:url({{staticImg.openwinning}})"></view>
+            </view>
+            <view bindtap="close" class="close"><image src="{{staticImg.close}}"></image></view>
+        </view>
+    </view>
+</view>

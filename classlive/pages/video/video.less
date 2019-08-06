@@ -1,0 +1,147 @@
+//out:video.wxss,compress:true,sourceMap:false
+.boutique{
+  height:100vh;
+}
+
+.list-box {
+  height: 98rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 32rpx;
+  position: relative;
+  border-bottom: 1rpx solid rgba(226,226,226,0.5);
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30rpx;
+    color: #191919;
+    .list-icon {
+      width: 42rpx;
+      height: 32rpx;
+      margin-right: 24rpx;
+    }
+  }
+  .list-right {
+    width: 14rpx;
+    height: 24rpx;
+    transition: all 0.3s;
+  }
+}
+.act{
+  .list-right {
+    transform: rotate(90deg);
+  }
+  .list-box {
+    border-bottom: 0;
+  }
+  .list-con {
+    display: block;
+  }
+}
+.list-con {
+  display: none;
+  width: calc(~"100vw - 64rpx");
+  max-height: 100vh;
+  padding: 0 32rpx;
+  box-shadow: inset 0 0 12rpx 0 rgba(104,104,104,.2);
+  .empItem {
+    font-size: 30rpx;
+    color: #B4B4B4;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100rpx;
+  }
+  .empImg{
+    display: block;
+    width:380rpx;
+    height:180rpx;
+    margin-bottom: 10rpx;
+  }
+}
+.header{
+  font-size:24rpx;
+  color:#b4b4b4;
+  text-align: center;
+  margin-top:10rpx;
+}
+.item_li{
+  height: 180rpx;
+  border-bottom: 1rpx solid rgba(226,226,226,0.5);
+  padding: 32rpx 0;
+}
+.item_li .item_left{
+  width:70%;
+  float: left;
+}
+.item_left >text{
+  display:block;
+}
+.item_left .item_title{
+  font-size: 30rpx;
+  color: #191919;
+  font-weight: 400;
+  display: block;
+  height:50rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_left .item_cont{
+  height:30rpx;
+  overflow:hidden;
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 16rpx;
+  display: block;
+  height:50rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_left >view{
+  margin-top: 16rpx;
+}
+.item_price{
+  font-size: 28rpx;
+  color: #FA8000;
+}
+.item_attention{
+  font-size: 22rpx;
+  color: #999;
+}
+
+.item_right{
+  float: right;
+}
+.item_right image{
+  width: 144rpx;
+  height: 144rpx;
+}
+.backTop {
+  position: fixed;
+  right: 50rpx;
+  bottom: 120rpx;
+  width: 140rpx;
+  height: 140rpx;
+}
+.default{
+  position: absolute;
+  top:32%;
+  width:100%;
+  image{
+    display: block;
+    width:325rpx;
+    height:152rpx;
+    margin:0 auto;
+  }
+  view{
+    text-align:center;
+    font-size: 30rpx;
+    color: #B4B4B4;
+  }
+}

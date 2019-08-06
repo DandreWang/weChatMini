@@ -1,0 +1,61 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.5",
+	"appid": "wx70691410297a3d39",
+	"projectname": "菠萝在线Online",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "测试题",
+					"pathName": "pages/answer/examine/examine",
+					"query": ""
+				},
+				{
+					"id": 0,
+					"name": "第二套测试题",
+					"pathName": "pages/examSec/examine/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "扫码进入",
+					"pathName": "pages/examSec/result/index",
+					"query": "scene=319",
+					"scene": 1047
+				}
+			]
+		}
+	}
+}

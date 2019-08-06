@@ -1,0 +1,112 @@
+<view id="coupon">
+    <view class="tab">
+        <block wx:for="{{tabList}}" wx:key='index'>
+            <text class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="switchType">{{item}}</text>
+        </block>
+    </view>
+    <view class="content">
+        <swiper class="swiper-box" current="{{currentTab}}">
+            <swiper-item style="overflow:auto">
+                <scroll-view scroll-y="true" style="height: 100vh;" bindscrolltolower="refresh" scroll-top="{{scrollTop}}" enable-back-to-top="false"  scroll-with-animation="false">
+                    <view wx:if="{{couponList.length>0}}">
+                        <block wx:for="{{couponList}}" wx:key="index" wx:for-index="index" wx:for-item="item"  >
+                            <view class="list no-use" style="background: url({{imgUrl}}coupon-bg.png) no-repeat;background-size: 100% 100%;">
+                                <view class="price">
+                                    <text class="pri">¥{{item.totalCount}}</text>
+                                    <text class="reduce">{{item.content}}</text>
+                                    <block wx:if="{{item.couponType == 1}}"><text class="type type1">{{item.couponName}}</text></block>
+                                    <block wx:if="{{item.couponType == 2}}"><text class="type type2">{{item.couponName}}</text></block>
+                                    <block wx:if="{{item.couponType == 3}}"><text class="type type3">{{item.couponName}}</text></block>
+                                    <block wx:if="{{item.couponType == 4}}"><text class="type type4">{{item.couponName}}</text></block>
+                                </view>
+                                <view class="time">有效期：<text>{{item.startTime}} - {{item.endTime}}</text>
+                                </view>
+                                <view class="code">券码：<text selectable="true" bindlongtap='copy'>{{item.couponCode}}</text></view>
+                                <block wx:if="{{item.couponType == 1}}">
+                                    <image class="img1" src="{{imgUrl}}mjq1.png"></image>
+                                </block> 
+                                <block wx:elif="{{item.couponType == 2}}">
+                                    <image class="img1" src="{{imgUrl}}zkq1.png"></image>
+                                </block> 
+                                <block wx:elif="{{item.couponType == 3}}">
+                                    <image class="img1" src="{{imgUrl}}djq1.png"></image>
+                                </block>  
+                                <block wx:elif="{{item.couponType == 4}}">
+                                    <image class="img1" src="{{imgUrl}}xjq1.png"></image>
+                                </block>                      
+                            </view>
+                        </block> 
+                    </view>
+                    <view class="no-data" wx:else>
+                        <image src="{{imgUrl}}no-coupon.png"></image>
+                        <view>暂无数据</view>
+                    </view>               
+                </scroll-view>
+            </swiper-item>
+            <swiper-item style="overflow:auto">
+               <scroll-view scroll-y="true" style="height: 100vh;" bindscrolltolower="refresh" scroll-top="{{scrollTop}}" enable-back-to-top="false"  scroll-with-animation="false">
+                    <view wx:if="{{couponList.length>0}}">
+                        <block wx:for="{{couponList}}" wx:key="index" wx:for-index="index" wx:for-item="item"  >
+                            <view class="list have-use" style="background: url({{imgUrl}}coupon-bg.png) no-repeat;background-size: 100% 100%;">
+                                <view class="price"><text class="pri">¥{{item.totalCount}}</text><text class="reduce">{{item.content}}</text><text class="type">{{item.couponName}}</text></view>
+                                <view class="time">有效期：<text>{{item.startTime}} - {{item.endTime}}</text></view>
+                                <view class="code">券码：{{item.couponCode}}</view>
+                                <image  class="img2" src="{{imgUrl}}have-use.png"></image>
+                                <block wx:if="{{item.couponType == 1}}">
+                                    <image class="img1" src="{{imgUrl}}mjq2.png"></image>
+                                </block> 
+                                <block wx:elif="{{item.couponType == 2}}">
+                                    <image class="img1" src="{{imgUrl}}zkq2.png"></image>
+                                </block> 
+                                <block wx:elif="{{item.couponType == 3}}">
+                                    <image class="img1" src="{{imgUrl}}djq2.png"></image>
+                                </block>  
+                                <block wx:elif="{{item.couponType == 4}}">
+                                    <image class="img1" src="{{imgUrl}}xjq2.png"></image>
+                                </block>                      
+                            </view>
+                        </block> 
+                    </view>
+                    <view class="no-data" wx:else>
+                        <image src="{{imgUrl}}no-coupon.png"></image>
+                        <view>暂无数据</view>
+                    </view>             
+                </scroll-view>
+            </swiper-item>
+            <swiper-item style="overflow:auto">
+                <scroll-view scroll-y="true" style="height: 100vh;" bindscrolltolower="refresh" scroll-top="{{scrollTop}}" enable-back-to-top="false"  scroll-with-animation="false">
+                    <view wx:if="{{couponList.length>0}}">
+                        <block wx:for="{{couponList}}" wx:key="index" wx:for-index="index" wx:for-item="item"  >
+                            <view class="list have-use" style="background:url({{imgUrl}}coupon-bg.png) no-repeat;background-size: 100% 100%;">
+                                <view class="price"><text class="pri">¥{{item.totalCount}}</text><text class="reduce">{{item.content}}</text><text class="type">{{item.couponName}}</text></view>
+                                <view class="time">有效期：<text>{{item.startTime}} - {{item.endTime}}</text></view>
+                                <view class="code">券码：{{item.couponCode}}</view>
+                                <image  class="img2" src="{{imgUrl}}expired.png"></image>
+                                <block wx:if="{{item.couponType == 1}}">
+                                    <image class="img1" src="{{imgUrl}}mjq2.png"></image>
+                                </block> 
+                                <block wx:elif="{{item.couponType == 2}}">
+                                    <image class="img1" src="{{imgUrl}}zkq2.png"></image>
+                                </block> 
+                                <block wx:elif="{{item.couponType == 3}}">
+                                    <image class="img1" src="{{imgUrl}}djq2.png"></image>
+                                </block>  
+                                <block wx:elif="{{item.couponType == 4}}">
+                                    <image class="img1" src="{{imgUrl}}xjq2.png"></image>
+                                </block>                      
+                            </view>
+                        </block> 
+                    </view>
+                    <view class="no-data" wx:else>
+                        <image src="{{imgUrl}}no-coupon.png"></image>
+                        <view>暂无数据</view>
+                    </view>               
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+         
+    </view>
+    <view class="refresh" hidden="{{searchLoading}}">
+        <view>上拉加载中……</view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="examSec {{show ? '' : 'hid'}}">
+  <image class="banner" src="{{imgUrl}}banner.png"></image>
+  <view class="title">测一测孩子拥有哪些潜能？</view>
+  <view class="txtList">
+    <view class="txtItem" wx:for="{{txt}}" wx:key="{{item.tit}}">
+      <view class="txtCon">
+        <image mode="widthFix" class="txtIcon" src="{{imgUrl}}icon{{index}}.png"></image>
+        <text class="txtTit">{{item.tit}}</text>
+      </view>
+      <view class="txtTxt">
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="bomBtns">
+    <button open-type="share" class="shareBtn btn">
+      <image class="shareImg" src="{{imgUrl}}share.png"></image>
+      <text>分享</text>
+    </button>
+    <getPhoneBtn class="btn" cls="testBtn" success="{{goTest}}">立即测试</getPhoneBtn>
+  </view>
+</view>

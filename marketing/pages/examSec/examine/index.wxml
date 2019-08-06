@@ -1,0 +1,13 @@
+<view class="examSec">
+  <view class="title">{{title}}</view>
+  <view class="list">
+    <view class="item {{chk === idx - 0 + 1 ? 'chk' : ''}}" bindtap="handleChk" wx:for="{{txt}}" wx:key="{{item}}" wx:for-index="idx" data-idx="{{idx - 0 + 1}}">
+      {{item}}
+    </view>
+  </view>
+  <view class="num"><text class="ni">{{num}}</text>/40</view>
+  <view class="bomBtns">
+    <view class="preBtn btn {{num === 1 ? 'dis' : ''}}" bindtap="handleToPre">上一题</view>
+    <view class="nextBtn btn" bindtap="handleToNext">{{num === 40 ? '查看结果' : '下一题'}}</view>
+  </view>
+</view>

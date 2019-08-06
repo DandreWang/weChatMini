@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "测一测孩子拥有哪些潜能？",
+    "navigationBarBackgroundColor": "#FF4F76",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "getPhoneBtn": "/pages/component/getPhoneBtn/index"
+    }
+}

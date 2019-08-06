@@ -1,0 +1,98 @@
+.examSec {
+  min-height: 100vh;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.examSec.hid {
+  display: none;
+}
+.examSec .banner {
+  height: 300rpx;
+  width: 100vw;
+}
+.examSec .title {
+  background: #fff;
+  width: calc(100vw - 30rpx);
+  height: 110rpx;
+  line-height: 110rpx;
+  padding-left: 30rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  font-family: PingFangSC-Semibold;
+  box-shadow: 0 10rpx 18rpx 0 rgba(104, 104, 104, 0.05);
+  margin-bottom: 20rpx;
+}
+.examSec .txtList {
+  background: #fff;
+  padding: 20rpx 30rpx 0;
+  margin-bottom: 120rpx;
+}
+.examSec .txtList .txtItem {
+  margin-bottom: 30rpx;
+}
+.examSec .txtList .txtItem .txtCon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.examSec .txtList .txtItem .txtCon .txtIcon {
+  width: 32rpx;
+  max-width: 32rpx;
+  max-height: 32rpx;
+  margin-right: 8rpx;
+}
+.examSec .txtList .txtItem .txtCon .txtTit {
+  font-size: 28rpx;
+  color: #202C45;
+  font-family: PingFangSC-Medium;
+  font-weight: bold;
+}
+.examSec .txtList .txtItem .txtTxt {
+  font-size: 24rpx;
+  color: #4D5460;
+  margin-left: 40rpx;
+  white-space: pre-wrap;
+}
+.examSec .bomBtns {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 -10rpx 18rpx 0 rgba(104, 104, 104, 0.05);
+}
+.examSec .bomBtns .btn {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+}
+.examSec .bomBtns .shareBtn {
+  background: #fff;
+  color: #202C45;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  border-radius: 0;
+}
+.examSec .bomBtns .shareBtn:after {
+  border: none;
+}
+.examSec .bomBtns .shareBtn .shareImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 6rpx;
+}
+.examSec .bomBtns .testBtn {
+  color: #fff;
+  background: linear-gradient(to right, #FF8000, #FF2FC6);
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  border-radius: 0;
+  height: 100rpx;
+  width: 50vw;
+}
+/*# sourceMappingURL=index.wxss.map */

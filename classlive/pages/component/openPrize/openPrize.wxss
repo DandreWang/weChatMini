@@ -1,0 +1,59 @@
+page{
+    width: 100%;
+    height: 100%;
+}
+.openprize{
+    width: 100%;
+    height: 100%;
+    background:rgba(34,34,34,0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.box{
+    position: absolute;
+    width: 100%;
+    /* height: 90%; */
+    background-size: 100% 100%;
+    left:0;
+    top:50%;
+}
+.inner{
+    padding-top:55%;
+    text-align: center;
+    position: relative;
+}
+.close{
+    width: 64rpx;
+    height: 64rpx;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    margin-left: -32rpx;
+}
+.close image{
+    width: 100%;
+    height: 100%;
+}
+.inner view:nth-child(1){
+    font-size:32rpx;
+    color:rgba(102,102,102,1);
+    font-weight: bold;
+    line-height:39px;
+}
+.inner view:nth-child(2){
+    display: inline-block;
+    width: 275rpx;
+    height: 275rpx;
+    font-size:42px;
+    font-weight:600;
+    color:rgba(255,255,255,1);
+    line-height:59px;
+    background-size: 100% 100%;
+}

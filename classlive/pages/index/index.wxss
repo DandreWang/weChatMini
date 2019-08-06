@@ -1,0 +1,691 @@
+.tab-h {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+  height:80rpx;
+	white-space: nowrap;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background: #fff;
+  box-shadow:0px 10rpx 18rpx 0rpx rgba(104,104,104,0.05);
+}
+
+.tab-item {
+  line-height:1;
+  height:80rpx;
+  position:relative;
+	margin: 0 36rpx;
+	display: inline-block;
+	font-size: 28rpx;
+  transition:all .3s ease;
+}
+
+.tab-item.active {
+	font-size: 32rpx;
+	font-weight: 600;
+}
+
+swiper {
+	height: 424rpx
+}
+
+.tab-item:after{
+	content: "";
+	position:absolute;
+  bottom:30rpx;
+  left:50%;
+  margin-left:-27.5rpx;
+	height: 10rpx;
+	width: 55rpx;
+	background: url(https://www.vipboluo.com/filesinfo/首页_选中.png) no-repeat center/cover;
+  opacity: 0;
+  transform: scale(0);
+  transition:all .3s ease;
+}
+
+.tab-item.active:after {
+	opacity: 1;
+  transform: scale(1);
+  transition:all .3s ease;
+}
+
+.tab-content {
+	margin-top: 65rpx;
+	height: 100vh
+}
+
+.Xheight {
+	height: 1170rpx
+}
+
+.scoll-h {
+	height: 100%
+}
+
+.kfz {
+	font-size: 34rpx;
+	color: #b4b4b4;
+	text-align: center;
+	margin-top: 10rpx
+}
+
+.carousel {
+	padding-top: 45rpx;
+	background-color: #fbfbfb
+}
+
+.bannerwrap{
+  width: 686rpx;
+	height: 424rpx;
+  margin-left: 32rpx;
+  border-radius:10rpx;
+  overflow: hidden;
+}
+.slide-image {
+	width: 686rpx;
+	height: 424rpx;
+  
+}
+
+.special_line {
+	margin-top: 40rpx;
+	overflow: hidden
+}
+
+.special_one {
+	float: left;
+	width: 33%;
+	text-align: center;
+  position:relative;
+}
+.special_one:before{
+  content:'';
+  width:2rpx;
+  height:100rpx;
+  background:rgba(226,226,226,0.8);
+  opacity:0.5;
+  position:absolute;
+  top:50%;
+  right:0;
+  margin-top:-50rpx;
+}
+.special_one:last-child:before{
+  display: none;
+}
+
+.special_one>image {
+	width: 72rpx;
+	height: 72rpx;
+	display: inline-block
+}
+
+.special_one>view {
+	font-size: 24rpx;
+	color: #666;
+	margin-top: 12rpx
+}
+
+.coupon {
+	padding: 0 32rpx;
+	margin-top: 78rpx
+}
+
+.coupon_header>text:nth-child(1) {
+	font-size: 36rpx;
+	font-weight: 600;
+	color: #191919
+}
+
+.coupon_header>text:nth-child(2) {
+	float: right;
+	font-size: 28rpx;
+	color: #fa8000
+}
+
+.coupon_content {
+	width: 100%;
+	height: 240rpx;
+	box-sizing: border-box;
+	position: relative;
+	margin-top: 20rpx
+}
+
+.coupon_content_left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 60%;
+	padding-top: 30rpx;
+	padding-left: 45rpx;
+	color: #fff
+}
+
+.price {
+	font-size: 28rpx
+}
+
+.pri {
+	font-size: 40rpx;
+	font-weight: 500
+}
+
+.type {
+	border-radius: 20rpx;
+	padding: 4rpx 10rpx;
+	margin-left: 15rpx;
+	margin-top: -20rpx
+}
+
+.type1 {
+	background: #DB5200
+}
+
+.type2 {
+	background: #006FBC
+}
+
+.type3 {
+	background: #A24ACE
+}
+
+.type4 {
+	background: #CE0025
+}
+
+.reduce {
+	font-size: 26rpx;
+	font-weight: 400;
+	margin: 10rpx 0
+}
+
+.time {
+	font-size: 26rpx;
+	font-weight: 400
+}
+
+.coupon_content_right {
+	width: 30%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-top: 95rpx;
+	text-align: center
+}
+
+.coupon_content_right view {
+	width: 152rpx;
+	height: 60rpx;
+	background: #fee303;
+	border-radius: 35rpx;
+	font-size: 24rpx;
+	font-weight: 600;
+	color: #f83600;
+	line-height: 60rpx;
+	display: inline-block;
+	text-align: center;
+	outline: none;
+	border: none
+}
+
+.regulation {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(34,34,34,0.6009);
+	z-index: 100
+}
+
+.regulation_content {
+	width: 100%;
+	height: 100%;
+	position: relative
+}
+
+.regulation_box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 85%;
+	height: 775rpx;
+	background: #fff;
+	border-radius: 32px;
+	padding: 40rpx;
+	margin: 0 auto;
+	box-sizing: border-box
+}
+
+.regulation_box>.title {
+	font-size: 24px !important;
+	font-weight: 600;
+	color: #ff8000;
+	margin-bottom: 30rpx;
+	text-align: center
+}
+
+.regulation_box>image {
+	width: 54rpx;
+	height: 92rpx;
+	position: absolute;
+	top: -92rpx;
+	right: 54rpx
+}
+
+.regulation_list>text {
+	font-size: 26rpx;
+	font-weight: 400;
+	color: #666;
+	line-height: 45rpx;
+	display: block
+}
+
+.regulation_list {
+	width: 100%;
+	height: 580rpx;
+	overflow: auto;
+	padding: 20rpx 0
+}
+
+.popular_choice {
+	padding: 0 32rpx;
+	margin-top: 78rpx
+}
+
+.popular_header>text:nth-child(1) {
+	font-size: 36rpx;
+	font-weight: 600;
+	color: #191919
+}
+
+.popular_header>text:nth-child(2) {
+	float: right;
+	font-size: 28rpx;
+	color: #fa8000
+}
+
+.popular_cont {
+	margin-top: 32rpx;
+	height:448rpx;
+}
+
+.popular_cont .left {
+	float: left;
+	width: 335rpx;
+	height: 448rpx;
+  position:relative;
+  border-radius:10rpx;
+}
+
+.popular_cont .right {
+	float: right;
+}
+
+.popular_cont .right .top,.popular_cont .right .bottom {
+	width: 335rpx;
+	height: 216rpx;
+  position:relative;
+  border-radius:10rpx;
+}
+
+.popular_cont .right .bottom {
+	margin-top: 16rpx;
+}
+
+.popular_cont .cont>view:first-child{
+    position:absolute;
+    width:300rpx;
+    text-indent:10rpx;
+    height:54rpx;
+    line-height:54rpx;
+    font-size:28rpx;
+    color:#fff;
+    background:rgba(255,128,0,0.9);
+    bottom:-5rpx;
+    left:0;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+}
+
+.popular_cont .cont>view:first-child:before{
+ content:'';
+  width:0;
+  height:0;
+  border-width:12rpx;
+  border-style:solid dashed dashed dashed;
+  border-color:rgba(255,128,0,0.9) transparent transparent transparent;
+  position:absolute;
+  top:0;
+  right:-10rpx; 
+}
+
+.popular_cont .cont>view:first-child text{
+  width:280rpx;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.popular_cont .cont>view:nth-child(2){
+  height:38rpx;  
+  line-height:38rpx;
+	display:inline-block;
+	font-size: 20rpx;
+	overflow: hidden;
+  background:rgba(0,0,0,0.6);
+  border-radius:20px;
+  color:#fff;
+  padding:0 20rpx;
+  margin-top:24rpx;
+  margin-left:15rpx;
+}
+
+.recent_chair {
+	padding: 0 32rpx;
+	margin-top: 64rpx
+}
+
+.chair_header>text:nth-child(1) {
+	font-size: 36rpx;
+	font-weight: 600;
+	color: #191919
+}
+
+.chair_header>text:nth-child(2) {
+	float: right;
+	font-size: 28rpx;
+	color: #fa8000
+}
+
+.item_recent {
+	overflow: hidden;
+	height: 208rpx;
+	border-bottom: 1rpx solid rgba(226,226,226,0.5)
+}
+
+.item_recent_left {
+	float: left;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 32rpx 0;
+	height: 144rpx;
+}
+
+.item_recent_left>text {
+	display: block
+}
+
+.item_recent_left>text:nth-child(1) {
+	font-size: 30rpx;
+  line-height:42rpx;
+}
+
+.item_recent_left>text:nth-child(2) {
+	display: inline-block;
+	width: 100%;
+	height: 29rpx;
+	font-size: 22rpx;
+	color: #999;
+	margin-top: 12rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.item_recent_left>view {
+	margin-top: 0;
+	line-height: 1;
+}
+
+.item_recent_left>view text:nth-child(1) {
+	font-size: 28rpx;
+	color: #fa8000
+}
+
+.item_recent_left>view text:nth-child(2) {
+	font-size: 22rpx;
+	color: #999;
+	margin-left: 24rpx
+}
+
+.item_recent_right {
+	float: right
+}
+
+.item_recent_right image {
+	margin-top: 32rpx;
+	width: 144rpx;
+	height: 144rpx
+}
+
+scroll-view.kfz image {
+	margin-top: 45%;
+	width: 325rpx;
+	height: 175rpx
+}
+
+scroll-view.kfz view {
+	font-size: 30rpx;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: #B4B4B4
+}
+
+.modal-mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: .5;
+	overflow: hidden;
+	z-index: 9000;
+	color: #fff
+}
+
+.successDialog {
+	width: 542rpx;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	z-index: 9999;
+	background: #f9f9f9;
+	margin: -280rpx 105rpx;
+	border-radius: 36rpx
+}
+
+.successDialog .modal-content {
+	width: 100%;
+	position: relative
+}
+
+.successDialog .modal-content image {
+	position: relative;
+	width: 250rpx;
+	height: 151rpx;
+	margin: 105rpx 146rpx;
+	margin-bottom: 29rpx
+}
+
+.successDialog .modal-content .successNote {
+	text-align: center;
+	font-size: 42rpx;
+	font-family: PingFangSC-Medium;
+	font-weight: 500;
+	color: #191919;
+	line-height: 72rpx
+}
+
+.successDialog .modal-footer {
+	display: flex;
+	flex-direction: row;
+	height: 210rpx;
+	font-size: 34rpx;
+	line-height: 86rpx
+}
+
+.successDialog .modal-footer .btn {
+	width: 348rpx;
+	height: 80rpx;
+	background: linear-gradient(90deg, #ff8000 0, #ff6425 100%);
+	box-shadow: 0 8rpx 20rpx 0 rgba(255,128,0,0.6);
+	border-radius: 44rpx;
+	margin: 0 auto;
+	margin-top: 66rpx;
+	text-align: center;
+	font-size: 32rpx;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: #fff;
+	line-height: 80rpx
+}
+
+.couponDialog {
+	width: 650rpx;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	z-index: 9999;
+	background: url();
+	margin: -307rpx 40rpx;
+	border-radius: 36rpx
+}
+
+.couponDialog .modal-content {
+	width: 100%;
+	height: 565rpx;
+	position: relative;
+	text-align: center;
+	left: 15rpx
+}
+
+.couponDialog .modal-content .note {
+	position: relative;
+	font-size: 44rpx;
+	font-family: FZLTCHJW--GB1-0;
+	font-weight: normal;
+	color: #fcebc2;
+	line-height: 52rpx;
+	text-shadow: 0 2px 0 #d84e12;
+	top: 140rpx
+}
+
+.couponDialog .modal-content .noteDetail {
+	position: relative;
+	top: 160rpx
+}
+
+.couponDialog .modal-content .noteDetail .word {
+	display: inline-block;
+	width: 24rpx;
+	margin-right: 18rpx;
+	margin-top: 30rpx;
+	font-size: 24rpx;
+	font-family: FZLTCHJW--GB1-0;
+	font-weight: normal;
+	color: #fcebc2;
+	line-height: 29rpx;
+	word-wrap: break-word;
+	letter-spacing: 20rpx;
+	vertical-align: top
+}
+
+.couponDialog .modal-content .noteDetail .price {
+	font-size: 120rpx;
+	font-family: FZLTCHJW--GB1-0;
+	font-weight: normal;
+	color: #fcebc2;
+	line-height: 144rpx;
+	text-shadow: 0 4rpx 0 #ed500b
+}
+
+.couponDialog .modal-content .noteDetail .unit {
+	font-size: 36rpx;
+	font-family: FZLTCHJW--GB1-0;
+	font-weight: normal;
+	color: #fcebc2;
+	line-height: 43rpx;
+	margin-left: 10rpx
+}
+
+.couponDialog .modal-content .date {
+	position: relative;
+	top: 185rpx;
+	font-size: 22rpx;
+	font-family: FZLTHJW--GB1-0;
+	font-weight: normal;
+	color: #fcebc2;
+	line-height: 26rpx
+}
+
+.couponDialog .modal-footer {
+	height: 177rpx;
+	margin-top: -177rpx;
+	text-align: center
+}
+
+.couponDialog .modal-footer .btn {
+	position: absolute;
+	width: 356rpx;
+	height: 68rpx;
+	background: #fee303;
+	border-radius: 34rpx;
+	font-size: 32rpx;
+	font-family: PingFangSC-Semibold;
+	font-weight: 600;
+	color: #f83600;
+	line-height: 68rpx;
+	left: 50%;
+	bottom: 30rpx;
+	margin-left: -178rpx
+}
+
+.couponDialog .close {
+	position: absolute;
+	top: -50rpx;
+	right: 55rpx;
+	width: 52rpx;
+	height: auto
+}
+
+.couponDialog .close image {
+	width: 52rpx;
+	height: 91rpx
+}
+
+.activeDialog {
+	width: 542rpx;
+	height: auto;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	z-index: 9999;
+	margin: -280rpx 105rpx;
+	border-radius: 32rpx
+}
+
+.activeDialog .modal-content image {
+	width: 100%;
+	height: 567rpx;
+	border-radius: 32rpx
+}
+
+.activeDialog .close {
+	position: relative;
+	margin-top: 20rpx;
+	text-align: center
+}
+
+.activeDialog .close image {
+	width: 52rpx;
+	height: 52rpx
+}

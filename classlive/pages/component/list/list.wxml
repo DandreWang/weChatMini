@@ -1,0 +1,28 @@
+<view class="listWrap">
+  <scroll-view class="mainView" scroll-y="true" bindscrolltolower="refresh" enable-back-to-top="false"
+               scroll-with-animation="false" scroll-top="{{scrollTop}}" bindscroll="bindscroll"
+               wx:if="{{list.length>0}}">
+    <view class="item_li" wx:for="{{list}}" data-id="{{item.id}}" bindtap="jump" wx:for-index="index"
+          wx:for-item="item">
+      <view class="item_left">
+        <text class="item_title">{{item.title}}</text>
+        <text class="item_cont">{{item.des}}</text>
+        <view class="item_bom">
+          <text class="item_price">免费</text>
+          <text class="item_attention">{{item.initClick>999999? "999999+" : item.initClick}}关注</text>
+        </view>
+      </view>
+      <image class="smlImg" src="{{item.smallImage}}"></image>
+    </view>
+    <view class="ovrTxt" wx:if="{{pageNum >= allPages}}">没有更多了</view>
+    <view class="header" hidden="{{!refreshStatus}}">
+      <view>上拉加载中……</view>
+      <view>{{refreshTime}}</view>
+    </view>
+  </scroll-view>
+  <view class="empBox" wx:else>
+    <image class="empImg" src="{{imgUrl}}{{empTxt}}.png"></image>
+    <text class="empTxt">{{empTxt}}</text>
+  </view>
+  <image class="backTop" src="{{imgUrl}}top.png" hidden="{{backFlg}}" bindtap="goTop"/>
+</view>

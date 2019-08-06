@@ -1,0 +1,24 @@
+<view class="form">
+    <view class="banner" style="background-image:url({{imgUrl}}boluozaixian.png)">
+        <view class="banner-bottom" style="background-image:url({{imgUrl}}xbg.png)">
+            <image src="{{imgUrl}}01.png"></image>
+            <image src="{{imgUrl}}02.png"></image>
+            <image src="{{imgUrl}}03.png"></image>
+        </view>
+    </view>
+    <view class="form-content">
+        <image class="line" src="{{imgUrl}}bg2.png"></image>
+        <view class="form-box">
+            <image class="free" src="{{imgUrl}}free.png"></image>
+            <form class="form-inner" bindsubmit="submitForm" >
+                <view class="title"><text>3000元</text>海归名师一对一课程</view>
+                <view class="sub">（限时免费试听<text>仅限前100位</text>）</view>
+                <input type="text" name="name" placeholder="姓名"/>
+                <input type="text" name="phone" placeholder="手机号码"/>
+                <input type="text" name="grade" placeholder="在读年级"/>
+                <button form-type="submit" >立即预约</button>
+            </form>
+        </view>
+    </view>
+    <view class="tips">最终解释权归菠萝在线所有</view>
+</view>

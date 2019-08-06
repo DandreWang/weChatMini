@@ -1,0 +1,188 @@
+page{
+    width: 100%;
+    height: 100%;
+}
+#coupon{
+    width: 100%;
+    height: 100%;
+}
+.tab{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tab-item{
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    flex: 1;
+    text-align: center;
+    font-size:32rpx;
+    font-weight:400;
+    color:rgba(25,25,25,1);
+}
+.active:after {
+    content: "";
+    display: block;
+    height: 15rpx;
+    width: 82.5rpx;
+    background: url(https://www.vipboluo.com/filesinfo/首页_选中.png) center bottom no-repeat;
+    background-size:100%;
+    margin:0 auto;
+    margin-top:-18rpx;
+}
+.content{
+    height: 92vh;
+    padding: 10rpx 5rpx;
+    background:#F9F9F9;
+    overflow: auto;
+}
+.swiper-box{
+    height: 100%;
+}
+
+.swiper-box> swiper-item{
+    overflow: auto;
+}
+.list{
+    width: 100%;
+    height: 295rpx;
+    box-sizing: border-box;
+    padding-top:30rpx;
+    padding-left:45rpx;
+    position: relative;
+}
+
+.list> .img1{
+    position: absolute;
+    right: 18rpx;
+    top: 16rpx;
+    width: 114rpx;
+    height: 120rpx;
+}
+.list> .img2{
+    position: absolute;
+    right: 90rpx;
+    top: 50rpx;
+    width: 114rpx;
+    height: 120rpx;
+}
+.no-use .price{
+    font-size:28rpx;
+}
+.no-use .pri{
+    font-size:40rpx;
+    font-weight:500;
+    color:rgba(255,128,0,1);
+}
+.no-use .reduce{
+    font-size:30rpx;
+    font-weight:400;
+    color:rgba(25,25,25,1);
+    line-height:42px;
+    margin-left:20rpx;
+}
+.no-use .type{
+    border-radius: 10rpx;
+    padding: 0 8rpx;
+    margin-left:15rpx;
+    vertical-align: middle;
+}
+.no-use .time{
+    font-size:26rpx;
+    font-weight:400;
+    color:rgba(25,25,25,1);
+    margin: 10rpx 0;
+}
+.no-use .code{
+    position: absolute;
+    left: 0;
+    bottom: 20rpx;
+    font-size:30rpx;
+    font-weight:400;
+    color:rgba(25,25,25,1);
+    width: 100%;
+    height: 80rpx;
+    line-height:80rpx;
+    text-align: center;
+}
+.type1{
+    color: #FF8000;
+    border:1rpx solid #FF8000;
+}
+.type2{
+    color: #1989FF;
+    border:1rpx solid #1989FF;
+}
+.type3{
+    color: #D907EA;
+    border:1rpx solid #D907EA;
+}
+.type4{
+    color: #FF4220;
+    border:1rpx solid #FF4220;
+}
+
+
+/* 已使用优惠券样式 */
+.have-use .price{
+    font-size:28rpx;
+}
+.have-use .pri{
+    font-size:40rpx;
+    font-weight:500;
+    color:#B4B4B4;
+}
+.have-use .reduce{
+    font-size:30rpx;
+    font-weight:400;
+    color:#B4B4B4;
+    line-height:42px;
+    margin-left:20rpx;
+}
+.have-use .type{
+    border-radius: 10rpx;
+    padding: 0 8rpx;
+    margin-left:15rpx;
+    vertical-align: middle;
+    color: #B4B4B4;
+}
+.have-use .time{
+    font-size:26rpx;
+    font-weight:400;
+    color:#B4B4B4;
+    margin: 10rpx 0;
+}
+.have-use .code{
+    position: absolute;
+    left: 0;
+    bottom: 20rpx;
+    font-size:30rpx;
+    font-weight:400;
+    color:#B4B4B4;
+    width: 100%;
+    height: 80rpx;
+    line-height:80rpx;
+    text-align: center;
+}
+
+.refresh{
+    font-size:24rpx;
+    color:#b4b4b4;
+    text-align: center;
+    margin-top:10rpx;
+}
+.no-data{
+    text-align: center;
+    margin-top:30%;
+}
+.no-data image{
+    width: 325rpx;
+    height: 123rpx;
+}
+
+.no-data view{
+    font-size:30rpx;
+}

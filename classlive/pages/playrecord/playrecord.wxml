@@ -1,0 +1,13 @@
+<view>
+  <view class="default" wx:if="{{!item.id}}">
+    <image  src="{{imgUrl}}暂无播放记录.png"></image>
+    <view>暂无播放记录</view>
+  </view>
+  <view class="record_li" data-id="{{item.id}}" data-lsId="{{item.userId}}" bindtap="jump" wx:else>
+    <image class="record_img" src='{{item.image}}' />
+    <view class='right'>
+      <text class="record_tit">{{item.title}}</text>
+      <view class='record_time'>{{item.createTime}}</view>
+    </view>
+  </view>
+</view>

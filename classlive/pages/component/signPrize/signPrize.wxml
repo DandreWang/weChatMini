@@ -1,0 +1,7 @@
+<view class='signPrize' style='display:{{signKoiStatus}}'>
+  <view class='box'>
+    <image class='close' bindtap='closeWin' src="{{baseUrl+'filesinfo/jinli/close.png'}}"></image>
+    <image class='bg' src="{{baseUrl+'filesinfo/jinli/bg1.png'}}"></image>
+    <view class='btn' bindtap='showForm'>立即报名抽奖</view>
+  </view>
+</view>

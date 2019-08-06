@@ -1,0 +1,135 @@
+#person {
+  padding: 32rpx;
+}
+#person .perHead {
+  position: relative;
+  width: 100%;
+  height: 460rpx;
+  border-radius: 24rpx;
+  margin-bottom: 24rpx;
+}
+#person .perHead image {
+  position: absolute;
+  display: block;
+  top: 100rpx;
+  left: 50%;
+  margin-left: -84rpx;
+  width: 168rpx;
+  height: 168rpx;
+  border: 6rpx solid #fff;
+  border-radius: 50%;
+}
+#person .perHead text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: #ffffff;
+  position: absolute;
+  bottom: 94rpx;
+}
+#person .perContent {
+  position: relative;
+  width: 100%;
+  height: 186rpx;
+}
+#person .perContent view {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  padding-top: 42rpx;
+}
+#person .perContent view image {
+  position: relative;
+  width: 57rpx;
+  height: 54rpx;
+  margin-left: -27rpx;
+  left: 50%;
+}
+#person .perContent view text {
+  display: block;
+  width: 100%;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+  text-align: center;
+}
+#person .perContent .line {
+  position: absolute;
+  left: 50%;
+  top: 42rpx;
+  margin-left: -2rpx;
+  width: 2rpx;
+  height: 70rpx;
+  background: #e8e8e8;
+}
+#person .modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+#person .modal-dialog {
+  width: 630rpx;
+  position: fixed;
+  top: 32%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -200rpx 60rpx;
+  border-radius: 32rpx;
+}
+#person .modal-dialog .modal-content {
+  position: relative;
+  width: 630rpx;
+  height: 750rpx;
+  background: #ffffff;
+  border-radius: 32rpx;
+}
+#person .modal-dialog .modal-content image {
+  width: 54rpx;
+  height: 92rpx;
+  position: absolute;
+  top: -92rpx;
+  right: 54rpx;
+}
+#person .modal-dialog .modal-content .title {
+  width: 100%;
+  height: 136rpx;
+  background: linear-gradient(90deg, #ff8000 0%, #ff6425 100%);
+  padding-top: 32rpx;
+  border-top-left-radius: 32rpx;
+  border-top-right-radius: 32rpx;
+}
+#person .modal-dialog .modal-content .title text {
+  text-align: center;
+  color: #ffffff;
+  font-size: 46rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  display: block;
+}
+#person .modal-dialog .modal-content .title .small {
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  margin-top: 0;
+}
+#person .modal-dialog .modal-content .ewm {
+  width: 514rpx;
+  height: 514rpx;
+  position: relative;
+  top: 30rpx;
+  left: 58rpx;
+}
+/*# sourceMappingURL=person.wxss.map */

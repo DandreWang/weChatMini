@@ -1,0 +1,13 @@
+<view class="share">
+    <view class="canvas-box">
+        <canvas canvas-id="firstCanvas"></canvas>
+    </view>
+    <view class="share-img" bindtap="previewImage">
+        <image class="bg"  src='{{imgUrl}}'></image>
+        <image class="photo" src='{{userInfo.avatarUrl}}'></image>
+        <text class="name">{{userInfo.nickName}}</text>
+    </view>
+    <view class="share-box">
+        <text bindtap="saveImage">保存图片</text>
+    </view>
+</view>

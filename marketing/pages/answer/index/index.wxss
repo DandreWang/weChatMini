@@ -1,0 +1,62 @@
+.answer{
+    width: 100%;
+    height: 100vh;
+    background: #76C8CD;
+    padding:2vh 0;
+    box-sizing: border-box;
+}
+.answer-content{
+    width: 100%;
+    height: 96vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding:32rpx 64rpx;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+.logo{
+    text-align: left;
+}
+.logo > image{
+    width: 245rpx;
+    height: 38rpx;
+}
+.text1 > image{
+    width: 607rpx;
+    height: 397rpx;
+}
+.text2{
+    margin-top:10rpx;
+}
+.text2 > image{
+    width: 622rpx;
+    height: 434rpx;
+}
+.bomBtn {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 32rpx;
+}
+.start-text {
+    width:598rpx;
+    height:112rpx;
+    border-radius:59rpx;
+    background-color: #F28B00 !important;
+    font-size:42rpx;
+    font-family: FZLTCHJW--GB1-0;
+    color: #fff;
+    text-align:center;
+    line-height:112rpx;
+    margin: 0 auto;
+}
+@media only screen and (device-width:375px) and (-webkit-device-pixel-ratio: 3) {
+    /* 兼容iphoneX */
+    .text1,.text2{
+        margin-top: 60rpx;
+    }
+    .start-text{
+        bottom: 50rpx;
+    }
+}

@@ -1,0 +1,69 @@
+<view class="examSec">
+  <view class="imgBox" style="background-image: url('{{imgUrl}}bg.png')">
+    <canvas class="cvs" canvas-id="top"></canvas>
+  </view>
+  <view class="topWrap">
+    <image mode="widthFix" class="topImg" src="{{imgUrl}}top.png"></image>
+    <view class="topList">
+      <view class="topItem" wx:for="{{maxList}}" wx:key="{{item}}">
+        <image class="topIcon" src="{{imgUrl}}ximg{{item.idx}}.png"></image>
+        <view class="topCon">
+          <view class="topTit">{{item.tit}}</view>
+          <view class="topTxt">{{item.txt}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tabWrap">
+    <view class="tabBtnBox">
+      <view class="tabBtn {{tabIdx === 0 ? 'act' : ''}}" bindtap="handleTabChange" data-idx="0">如何激发学习动力</view>
+      <view class="tabBtn {{tabIdx === 1 ? 'act' : ''}}" bindtap="handleTabChange" data-idx="1">如何规划职业发展</view>
+    </view>
+    <swiper class="tabListWrap" current="{{tabIdx}}" bindchange="tabChange" style="height: {{tabH}}px">
+      <swiper-item id="tabList0" class="tabList" data-id="0">
+        <view class="tabItem" wx:for="{{tabData1}}" wx:for-index="idx1">
+          <view class="tabTit">{{tits[idx1]}}</view>
+          <view class="tab1SubBox">
+            <view class="tab1SubL">引导方向</view>
+            <view class="tab1SubR">{{item.sub}}</view>
+          </view>
+          <view class="tabSub">培养建议：</view>
+          <view class="tab1MsgTit">{{item.msgTit}}</view>
+          <view class="tabTxtW">
+            <text class="tabTxt">{{item.txt}}</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item id="tabList1" class="tabList" data-id="1">
+        <view class="tabItem" wx:for="{{tabData2}}" wx:for-index="idx2">
+          <view class="tabTit">{{tits[idx2]}}</view>
+          <view class="tab2Sub">
+            <view class="tab2Icon">
+              <image mode="widthFix" class="tab2Icon1" src="{{imgUrl}}icon4.png"></image>
+            </view>
+            <text class="tabSub">未来可学习的专业</text>
+          </view>
+          <view class="tabTxt tabTxt2">{{item.t1}}</view>
+          <view class="tab2Sub">
+            <view class="tab2Icon">
+              <image mode="widthFix" class="tab2Icon2" src="{{imgUrl}}icon5.png"></image>
+            </view>
+            <text class="tabSub">未来可发展的职业倾向</text>
+          </view>
+          <view class="tabTxt tabTxt2">{{item.t2}}</view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="bomBtns">
+    <block wx:if="{{!scene}}">
+      <view class="shareBtn btn" bindtap="handleShare">
+        <image class="shareImg" src="{{imgUrl}}share.png"></image>
+        <text>生成分享海报</text>
+      </view>
+      <view class="moreBtn btn" bindtap="goMoreTest">更多测试</view>
+    </block>
+    <getPhoneBtn class="{{scene ? 'show' : 'hide'}}" cls="testBtn" success="{{goTest}}">我也要测试</getPhoneBtn>
+  </view>
+  <canvas class="shareCvs" canvas-id="share"></canvas>
+</view>

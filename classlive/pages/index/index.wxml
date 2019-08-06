@@ -1,0 +1,214 @@
+<!--index.wxml-->
+<view>
+  <view>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+      <block wx:for="{{tarbarList}}" wx:key='index'>
+        <text class="tab-item {{currentTab==index?'active':''}}" decode="{{true}}" data-current="{{index}}"
+              bindtap="swichNav">{{item.name}}
+        </text>
+      </block>
+    </scroll-view>
+    <swiper class="tab-content {{isIphoneX ?'Xheight':''}}" current="{{currentTab}}" duration="300" bindchange="switchTab">
+      <block wx:for="{{tarbarList}}" wx:key='i'>
+        <swiper-item wx:if="{{item.id==-1}}" data-id="{{item.id}}">
+          <scroll-view scroll-y="true" class="scoll-h">
+
+            <!-- 轮播 -->
+            <view class='carousel'>
+              <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}"
+                      interval="{{interval}}" duration="{{duration}}" indicator-active-color='rgba(0,0,0,0.75)' previous-margin='4rpx' next-margin='4rpx'>
+                <block wx:for="{{slideData}}" wx:key='ii'>
+                  <swiper-item>
+                    <view class='bannerwrap'>
+                      <image src="{{item.image||item.slideshowImageName}}" class="slide-image" width="355"
+                           data-Src="{{item.slideshowUrl}}" bindtap="web"/>
+                    </view>
+                  </swiper-item>
+                </block>
+              </swiper>
+            </view>
+            <!-- 专线栏 -->
+            <view class="special_line">
+              <view class="special_one" bindtap="ClassRecord">
+                <image src="{{imgUrl}}听课记录icon.png"/>
+                <view>听课记录</view>
+              </view>
+              <view  class="special_one" bindtap="jumpMore" data-id="8">
+                <image src="{{imgUrl}}精选专区icon.png"/>
+                <view>精选专区</view>
+              </view>
+              <!--<view class="special_one" bindtap="Video">-->
+                <!--<image src="{{imgUrl}}视频专栏icon.png"/>-->
+                <!--<view>视频专栏</view>-->
+              <!--</view>-->
+              <view class="special_one" bindtap="ExamineMore">
+                <image src="{{imgUrl}}jqjzicon.png"/>
+                <view>趣味测试</view>
+              </view>
+            </view>
+
+            <!--优惠券专栏-->
+            <!--<view style="display:{{hide}}">    -->
+            <!--<view class="coupon">-->
+            <!--<view class="coupon_header">-->
+            <!--<text>优惠券专栏</text>-->
+            <!--<text bindtap="showDialogBtn">优惠券使用规则</text>-->
+            <!--</view>-->
+            <!--<block wx:if="{{couponList.couponType == 1}}">-->
+
+            <!--</block>-->
+            <!--<view class="coupon_content" style="background: url({{couponBgUrl}}) no-repeat;background-size: 100% 100%;">-->
+            <!--<view class="coupon_content_left">-->
+            <!--<view class="price">-->
+            <!--<text class="pri">￥{{couponList.totalCount}}</text>-->
+            <!--<block wx:if="{{couponList.couponType == 1}}"><text class="type type1">{{couponList.couponName}}</text></block>-->
+            <!--<block wx:if="{{couponList.couponType == 2}}"><text class="type type2">{{couponList.couponName}}</text></block>-->
+            <!--<block wx:if="{{couponList.couponType == 3}}"><text class="type type3">{{couponList.couponName}}</text></block>-->
+            <!--<block wx:if="{{couponList.couponType == 4}}"><text class="type type4">{{couponList.couponName}}</text></block>-->
+            <!--</view>-->
+            <!--<view class="reduce">{{couponList.content}}</view>-->
+            <!--<view class="time">有效期：<text>{{couponList.startTime}} - {{couponList.endTime}}</text></view>-->
+            <!--</view>-->
+            <!--<view class="coupon_content_right">-->
+            <!--<view bindtap="clickGetCoupon" data-id="{{couponList.id}}">点击领取</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+
+            <!-- 热门精选 -->
+            <view class='popular_choice'>
+              <view class='popular_header'>
+                <text>热门精选</text>
+                <text bindtap="jumpMore" data-id="7">查看更多</text>
+              </view>
+              <view class='popular_cont'>
+                <view class='left cont'
+                      style='background: url("{{rmjxList[0].indexImage}}") no-repeat;background-size: 100% 100%;'
+                      data-Id="{{rmjxList[0].id}}" bindtap="jump">
+                  <view><text>{{rmjxList[0].title}}</text></view>
+                  <view><text>{{rmjxList[0].initClick}}人关注</text></view>
+                </view>
+                <view class='right'>
+                  <view class='top cont'
+                        style='background: url("{{rmjxList[1].indexImage}}") no-repeat;background-size: 100% 100%;'
+                        data-Id="{{rmjxList[1].id}}" bindtap="jump">
+                    <view><text>{{rmjxList[1].title}}</text></view>
+                    <view><text>{{rmjxList[1].initClick.initClick>999999? '999999+' : rmjxList[1].initClick}}人关注</text></view>
+                  </view>
+                  <view class='bottom cont'
+                        style='background: url("{{rmjxList[2].indexImage}}") no-repeat;background-size: 100% 100%;'
+                        data-Id="{{rmjxList[2].id}}" bindtap="jump">
+                    <view><text>{{rmjxList[2].title}}</text></view>
+                    <view><text>{{rmjxList[2].initClick}}人关注</text></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!-- 近期讲座 -->
+            <view class='recent_chair'>
+              <view class='chair_header'>
+                <text>近期讲座</text>
+                <text bindtap="jumpMore" data-id="9">查看更多</text>
+              </view>
+              <view class='recent_cont'>
+                <view class='item_recent' wx:for="{{jqjzList}}" wx:key='iii' data-Id="{{item.id}}" bindtap="jump"
+                      wx:for-index="index" wx:for-item="item">
+                  <view class='item_recent_left'>
+                    <text>{{item.title}}</text>
+                    <!--<text>{{item.des}}</text>-->
+                    <view>
+                      <text>免费</text>
+                      <text>{{item.initClick>999999? '999999+' : item.initClick}}人关注</text>
+                    </view>
+                  </view>
+                  <view class='item_recent_right'>
+                    <image src='{{item.smallImage}}'></image>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+          </scroll-view>
+
+
+        </swiper-item>
+        <swiper-item wx:else data-id="{{item.id}}">
+          <scroll-view scroll-y="true" class="scoll-h kfz">
+            <image src="{{imgUrl}}敬请期待.png"></image>
+            <view>敬请期待</view>
+          </scroll-view>
+        </swiper-item>
+      </block>
+
+    </swiper>
+  </view>
+
+  <!--优惠券使用规则弹窗-->
+  <view class="regulation" wx:if="{{showModal}}">
+    <view class="regulation_content">
+      <view class="regulation_box">
+        <image src="{{imgUrl}}close_w.png" mode="cover" bindtap="onCancel"></image>
+        <view class="title">优惠券使用规则</view>
+        <view class="regulation_list">
+          <text>1.优惠券面值以券面显示为准；</text>
+          <text>2.优惠券只能在适用范围内使用，具体可查看优惠券使用说明；</text>
+          <text>3.优惠券自领取之日起30日内有效，请在有效期内使用此券，过期作废；</text>
+          <text>4.订单金额满足一定条件后，优惠券可叠加使用；</text>
+          <text>5.优惠券限用于对应的活动，不同活动的优惠券，不通用且不叠加使用；</text>
+          <text>6.活动中包含特价产品时不能使用优惠券，优惠券不能与其他优惠（如促销活动）同时使用；</text>
+          <text>7.优惠券不能兑换现金，不找零，不拆分，不得转赠他人使用；</text>
+          <text>8.使用优惠券支付的订单，若退费，优惠券抵扣金额不能退还，只退还实际支付的金额；</text>
+          <text>9.优惠券一旦使用（已支付），不论退费与否，都无法退返优惠券至用户账户；</text>
+          <text>10.退费后订单金额不满足优惠券使用条件时，优惠券失效；</text>
+          <text>11.优惠券抵扣金额不能开具发票；</text>
+          <text>12.针对优惠券的使用，有可能会发生不预告进行变更的可能，敬请谅解；</text>
+          <text>13.菠萝在线在法律范围内保留对优惠券使用细则的最终解释权。</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--优惠弹窗-->
+<view class="modal-dialog couponDialog" wx:if="{{showCouponModal}}"
+      style='background: url({{imgUrl+couponData[couponIndex].backImg+"券弹窗.png"}}) no-repeat;background-size: 100% 100%;'>
+  <view class="modal-content">
+    <view class="note">{{couponData[couponIndex].content}}</view>
+    <view class="noteDetail">
+      <text class="word">{{couponData[couponIndex].couponTypeValue}}</text>
+      <text class="price">{{couponData[couponIndex].bigWord}}</text>
+      <text class="unit">{{couponData[couponIndex].word}}</text>
+    </view>
+    <view class="date">有效期：{{couponData[couponIndex].usedStartTime}}-{{couponData[couponIndex].usedEndTime}}</view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn" bindtap="clickGetCoupon" data-id="{{couponData[couponIndex].id}}">点击领取</view>
+  </view>
+  <view class="close">
+    <image src="{{imgUrl}}close_w.png" bindtap="hideCouponModal"></image>
+  </view>
+</view>
+<!--活动弹窗-->
+<view class="modal-dialog activeDialog" wx:if="{{showActiveModal}}">
+  <view class="modal-content">
+    <image src="{{activeData[activeIndex].image}}" data-src="{{activeData[activeIndex].url}}"
+           bindtap="activeJump"></image>
+  </view>
+  <view class="close">
+    <image src="{{imgUrl}}guanbi.png" bindtap="hideActiveModal"></image>
+  </view>
+</view>
+
+<!--领取成功弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove"
+      wx:if="{{showActiveModal||showSuccessModal || showCouponModal}}"></view>
+<view class="modal-dialog successDialog" wx:if="{{showSuccessModal}}">
+  <view class="modal-content">
+    <image src="{{imgUrl}}领取成功.png"></image>
+    <view class="successNote">恭喜您，领取成功!</view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn" bindtap="goCouponList">优惠券详情</view>
+  </view>
+</view>
+

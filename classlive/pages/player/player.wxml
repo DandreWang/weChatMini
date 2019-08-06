@@ -1,0 +1,4 @@
+<!--pages/play/play.wxml-->
+<view class="play">
+   <video controls src="{{src}}" bindended="end" binderror="err"/>
+</view>

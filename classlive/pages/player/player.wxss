@@ -1,0 +1,7 @@
+.play {
+  height: 100vh;
+}
+.play video {
+  width: 100vw;
+}
+/*# sourceMappingURL=player.wxss.map */

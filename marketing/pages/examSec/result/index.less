@@ -1,0 +1,232 @@
+.examSec {
+  min-height: 100vh;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .imgBox {
+    width: 100vw;
+    height: 572rpx;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .cvs {
+      width: 344rpx;
+      height: 344rpx;
+      position: relative;
+      top: 84rpx;
+      left: 50%;
+      margin-left: -172rpx;
+    }
+  }
+
+  .topWrap {
+    background: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    margin-top: -20rpx;
+    margin-bottom: 20rpx;
+    text-align: center;
+    padding: 0 32rpx;
+    .topImg {
+      width: 366rpx;
+      margin-top: -41rpx;
+    }
+    .topList {
+      margin-top: 32rpx;
+      .topItem {
+        display: flex;
+        margin-bottom: 30rpx;
+        .topIcon {
+          width: 84rpx;
+          height: 84rpx;
+          margin-right: 21rpx;
+          flex-shrink: 0;
+        }
+        .topCon {
+          text-align: left;
+          .topTit {
+            font-size: 32rpx;
+            color: #202C45;
+            font-family: PingFangSC-Medium;
+            font-weight: bold;
+            letter-spacing: 3rpx;
+            margin: 10rpx 0;
+          }
+          .topTxt {
+            font-size: 24rpx;
+            font-family: PingFangSC-Regular;
+            color: #4D5460;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  .tabWrap {
+    box-shadow: 0 10rpx 18rpx 0 rgba(104, 104, 104, 0.05);
+    margin-bottom: 99rpx;
+    .tabBtnBox {
+      display: flex;
+      background: #fff;
+      box-shadow: 0 1rpx 0 0 #E8E8E8;
+      .tabBtn {
+        width: 50vw;
+        height: 110rpx;
+        line-height: 110rpx;
+        font-size: 36rpx;
+        color: #4D5460;
+        font-family: PingFangSC-Regular;
+        position: relative;
+        text-align: center;
+        &.act {
+          font-family: PingFangSC-Semibold;
+          color: #FF7400;
+          font-weight: bold;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -2rpx;
+            left: 0;
+            width: 50vw;
+            height: 4rpx;
+            background: #FF7400;
+          }
+        }
+      }
+    }
+    .tabListWrap {
+      .tabList {
+        height: auto !important;
+        .tabItem {
+          color: #202C45;
+          margin: 0 32rpx;
+          padding: 30rpx 0 20rpx;
+          border-bottom: 1rpx solid #E8E8E8;
+          .tabTit {
+            font-size: 32rpx;
+            font-family: PingFangSC-Medium;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: 2rpx;
+            margin-bottom: 16rpx;
+          }
+          .tab1SubBox {
+            border: 1rpx solid #FF7400;
+            border-radius: 4rpx;
+            font-size: 24rpx;
+            display: flex;
+            height: 42rpx;
+            line-height: 42rpx;
+            width: fit-content;
+            margin-bottom: 18rpx;
+            .tab1SubL {
+              padding: 0 8rpx;
+              background: #FF7400;
+              color: #fff;
+            }
+            .tab1SubR {
+              color: #FF7400;
+              padding: 0 14rpx;
+            }
+          }
+          .tabSub {
+            font-size: 28rpx;
+            font-family: PingFangSC-Regular;
+            font-weight: bold;
+            line-height: 1;
+          }
+          .tab1MsgTit {
+            font-size: 24rpx;
+            font-family: PingFangSC-Regular;
+            margin: 16rpx 0 8rpx;
+          }
+          .tabTxt {
+            font-size: 24rpx;
+            color: #4D5460;
+          }
+          .tabTxtW {
+            line-height: 1;
+          }
+
+          .tab2Sub {
+            display: flex;
+            align-items: center;
+            &:nth-child(4) {
+              margin-top: 10rpx;
+            }
+            .tab2Icon {
+              width: 24rpx;
+              margin-right: 10rpx;
+            }
+            .tab2Icon1 {
+              width: 24rpx;
+            }
+            .tab2Icon2 {
+              width: 20rpx;
+            }
+          }
+          .tabTxt2 {
+            margin: 0 24rpx 0 34rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .bomBtns {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -10rpx 18rpx 0 rgba(104, 104, 104, 0.05);
+    .btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100rpx;
+      font-weight: bold;
+    }
+    .shareBtn {
+      background: #fff;
+      color: #202C45;
+      font-size: 30rpx;
+      font-family: PingFangSC-Regular;
+      .shareImg {
+        width: 30rpx;
+        height: 30rpx;
+        margin-right: 6rpx;
+      }
+    }
+    .moreBtn {
+      color: #fff;
+      background: linear-gradient(to right, #FF8000, #FF2FC6);
+      font-size: 36rpx;
+      font-family: PingFangSC-Semibold;
+    }
+    .testBtn {
+      color: #fff;
+      background: linear-gradient(to right, #FF8000, #FF2FC6);
+      font-size: 36rpx;
+      font-family: PingFangSC-Semibold;
+      border-radius:0;
+      height: 100rpx;
+      width: 100vw;
+    }
+  }
+
+  .shareCvs {
+    position: absolute;
+    left: -800rpx;
+    top: 0;
+    width: 750rpx;
+    height: 1434rpx;
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+}

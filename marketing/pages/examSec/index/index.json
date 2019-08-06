@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "测一测孩子拥有哪些潜能？",
+    "usingComponents": {
+        "getPhoneBtn": "/pages/component/getPhoneBtn/index"
+    }
+}

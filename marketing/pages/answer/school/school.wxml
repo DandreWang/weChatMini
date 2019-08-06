@@ -1,0 +1,6 @@
+<view class="school">
+    <image class="bg" src="{{schoolImg}}"></image>
+    <image class="photo" src='{{userInfo.avatarUrl}}'></image>
+    <text class="name">{{userInfo.nickName}}</text>
+    <view class="bottom"><text bindtap="goShare" class="share">生成分享海报</text><text bindtap="goForm" class="goform">定制升学方案</text></view>
+</view>

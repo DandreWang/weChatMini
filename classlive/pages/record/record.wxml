@@ -1,0 +1,28 @@
+<view class="listWrap">
+  <scroll-view class="mainView" scroll-y="true" bindscrolltolower="refresh" enable-back-to-top="false"
+               scroll-with-animation="false" scroll-top="{{scrollTop}}" bindscroll="bindscroll" data-id="{{item.id}}"
+               wx:if="{{list.length>0}}">
+    <view class="record_li" wx:for="{{list}}" data-id="{{item.id}}" bindtap="jump" wx:key="{{index}}">
+      <image class="record_img" src="{{item.image}}"></image>
+      <view class="right">
+        <text class="record_tit">{{item.title}}</text>
+        <text class="record_time">{{item.createTime}}</text>
+      </view>
+    </view>
+    <view class="delBox">
+      <view bindtap='deleteHistory'>
+        <image class="delImg" src="{{imgUrl}}delete.png" />
+        <text class="delTxt">清除听课记录</text>
+      </view>
+    </view>
+    <view class="header" hidden="{{!refreshStatus}}">
+      <view>上拉加载中……</view>
+      <view>{{refreshTime}}</view>
+    </view>
+  </scroll-view>
+  <view class="empBox" wx:else>
+    <image class="empImg" src="{{imgUrl}}暂无听课记录.png"></image>
+    <text class="empTxt">暂无听课记录</text>
+  </view>
+  <image class="backTop" src="{{imgUrl}}top.png" hidden="{{backFlg}}" bindtap="goTop"/>
+</view>

@@ -1,0 +1,33 @@
+<view id="person">
+  <view class="perHead" style="background:url({{pageImgUrl}}personBG.png) no-repeat;background-size:cover;">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="perContent" wx:if="{{type != 1}}">
+    <view bindtap="recordBtn">
+      <image src="{{pageImgUrl}}listen.png"  mode="cover"></image>
+      <text>听课记录</text>
+    </view>
+    <view class="line"></view>
+    <view bindtap="showDialogBtn">
+      <image src="{{pageImgUrl}}zskf.png"  mode="cover"></image>
+      <text>留言咨询</text>
+    </view>
+    <!-- <view bindtap="couponBtn">
+      <image src="{{pageImgUrl}}coupon.png" mode="cover"></image>
+      <text>优惠券</text>
+    </view> -->
+  </view>
+  <!--弹窗-->
+  <!--<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>-->
+  <!--<view class="modal-dialog" wx:if="{{showModal}}">-->
+    <!--<view class="modal-content">-->
+      <!--<image src="{{imgUrl}}index/close_w.png" mode="cover" bindtap="onCancel" data-status="cancel"></image>-->
+      <!--<view class="title">-->
+        <!--<text>添加菠萝在线真人微信</text>-->
+        <!--<text class="small">长按二维码 快速转发</text>-->
+      <!--</view>-->
+      <!--<image src="{{pageImgUrl}}901.png" class="ewm"  bindlongtap="previewImage" ></image>-->
+    <!--</view>-->
+  <!--</view>-->
+</view>

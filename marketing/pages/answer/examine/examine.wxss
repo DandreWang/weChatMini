@@ -1,0 +1,88 @@
+.banner{
+    width: 750rpx;
+    height: 406rpx;
+    position: relative; 
+}
+.logo{
+    position: absolute;
+    left: 32rpx;
+    top: 32rpx;
+    width: 245rpx;
+    height: 38rpx;
+}
+.banner-img{
+    width: 750rpx;
+    height: 406rpx;
+}
+.question{
+    height:176rpx;
+    background:rgba(118,200,205,1);
+    padding:42rpx 49rpx;
+    box-sizing: border-box;
+    font-size:32rpx;
+    font-weight:normal;
+    color:rgba(255,255,255,1);
+    line-height:48rpx;
+}
+.answer{
+    padding:42rpx 49rpx;
+}
+.answer > .radio-group > .radio{
+    display: block;
+    margin:30rpx 0;
+    font-size:28rpx;
+    font-weight:normal;
+    color:rgba(102,102,102,1);
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;/* 圆角 */
+    width: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+    height: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+    line-height: 50rpx;
+    text-align: center;
+    font-size:0rpx; /* 对勾大小 30rpx */
+    color:#FFA52D; /* 对勾颜色 白色 */
+    background: #FFA52D;
+    transform:translate(-50%, -50%) scale(1);
+    -webkit-transform:translate(-50%, -50%) scale(1);
+ 
+}
+.operation{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    padding:42rpx 49rpx;
+    box-sizing: border-box;
+}
+.progress{
+    font-size:28rpx;
+    font-weight:normal;
+    color:rgba(151,151,151,1);
+    line-height:64rpx;
+}
+.prev,.next{
+    display: inline-block;
+    width:156rpx;
+    height:64rpx;
+    background:rgba(255,255,255,1);
+    border-radius:32rpx;
+    border:3rpx solid rgba(219,219,219,1);
+    font-size:24rpx;
+    font-weight:normal;
+    color:rgba(151,151,151,1);
+    line-height:64rpx;
+}
+.button-hover {
+    background-color: #DBDBDB;
+}
+@media only screen and (device-width:375px) and (-webkit-device-pixel-ratio: 3) {
+    /* 兼容iphoneX */
+    .operation{
+        bottom: 50rpx;
+    }
+}

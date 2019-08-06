@@ -1,0 +1,392 @@
+#chat {
+  font-family: PingFangSC-Regular;
+  background: #f9f9f9;
+  font-weight: 400;
+  padding-top: 110rpx;
+  height: calc(100vh - 110rpx);
+  display: flex;
+  flex-direction: column;
+}
+#chat .head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 48rpx);
+  height: 110rpx;
+  background: #FBFBFB;
+  padding: 0 24rpx;
+  box-shadow: 0rpx 10rpx 18rpx 0rpx rgba(104, 104, 104, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+#chat .head .zc {
+  font-size: 30rpx;
+  color: #191919;
+}
+#chat .head .teaImg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+#chat .bomBtn {
+  position: fixed;
+  top: 144rpx;
+  right: 0;
+  height: 64rpx;
+  border-radius: 32rpx 0 0 32rpx;
+  box-shadow: 0 4rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx 0 35rpx;
+  font-size: 26rpx;
+  color: #ff8000;
+  background: #f9f9f9;
+  z-index: 1;
+}
+#chat .bomBtn .bomImg {
+  width: 15rpx;
+  height: 14rpx;
+  margin-right: 12rpx;
+}
+#chat .content {
+  max-height: calc(100vh - 198rpx);
+  flex: 1;
+}
+#chat .content #chatContent {
+  height: auto;
+  min-height: calc(100vh - 436rpx);
+  padding: 36rpx 24rpx;
+}
+#chat .content #chatContent .header {
+  font-size: 24rpx;
+  color: #b4b4b4;
+  text-align: center;
+  margin-top: 10rpx;
+}
+#chat .content #chatContent .adnote {
+  background: #ffffff;
+  border-radius: 8rpx;
+  border: 1px solid #e8e8e8;
+}
+#chat .content #chatContent .adnote .headTitle {
+  width: 100%;
+  height: 88rpx;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 30rpx;
+  text-align: center;
+  color: #666666;
+  line-height: 88rpx;
+  position: relative;
+}
+#chat .content #chatContent .adnote .headTitle image {
+  position: absolute;
+  width: 32rpx;
+  height: 32rpx;
+  top: 28rpx;
+  right: 36rpx;
+}
+#chat .content #chatContent .adnote .adContent {
+  font-size: 26rpx;
+  color: #999999;
+  padding: 28rpx 46rpx;
+}
+#chat .content #chatContent .adnote .adContent .item {
+  margin-bottom: 30rpx;
+}
+#chat .content #chatContent .creatTime {
+  font-size: 22rpx;
+  color: #b4b4b4;
+  text-align: center;
+  margin: 36rpx 0 -18rpx;
+}
+#chat .content #chatContent .left {
+  margin-top: 36rpx;
+  display: flex;
+  flex-direction: row;
+}
+#chat .content #chatContent .left .userinfo-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+#chat .content #chatContent .left .msgCon {
+  margin: 0 24rpx;
+  position: relative;
+}
+#chat .content #chatContent .left .msgCon .bg {
+  width: 10rpx;
+  height: 74rpx;
+  position: absolute;
+  top: 34rpx;
+  right: unset;
+  left: -7rpx;
+  background-size: cover;
+  background-position: left;
+}
+#chat .content #chatContent .left .msgCon .userinfo-nickname {
+  font-size: 22rpx;
+  line-height: 1;
+  color: #b4b4b4;
+  margin-bottom: 12rpx;
+  text-align: left;
+}
+#chat .content #chatContent .left .msgCon .myLuYin {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#chat .content #chatContent .left .msgCon .myLuYin .audio {
+  height: 72rpx;
+  max-width: 220rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  border-radius: 10px;
+  border: 1rpx solid #E8E8E8;
+  text-align: left;
+}
+#chat .content #chatContent .left .msgCon .myLuYin .audio .ico {
+  margin-top: 16rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+#chat .content #chatContent .left .msgCon .myLuYin .yyTxt {
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+  color: #999;
+  margin: 0 12rpx;
+  line-height: 2;
+}
+#chat .content #chatContent .left .msgCon .myMsg {
+  max-width: 60vw;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  border: 1rpx solid #E8E8E8;
+  padding: 16rpx 30rpx;
+  text-align: left;
+  display: flex;
+}
+#chat .content #chatContent .left .msgCon .myMsg .msgTxt {
+  font-size: 28rpx;
+  color: #191919;
+  word-break: break-all;
+}
+#chat .content #chatContent .left .msgCon .myImg {
+  width: 282rpx;
+  font-size: 28rpx;
+}
+#chat .content #chatContent .left .msgCon .myVideo {
+  width: 144rpx;
+  height: 144rpx;
+}
+#chat .content #chatContent .right {
+  margin-top: 36rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#chat .content #chatContent .right .userinfo-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+#chat .content #chatContent .right .msgCon {
+  margin: 0 24rpx;
+  position: relative;
+}
+#chat .content #chatContent .right .msgCon .bg {
+  width: 10rpx;
+  height: 74rpx;
+  position: absolute;
+  top: 34rpx;
+  right: -7rpx;
+  left: unset;
+  background-size: cover;
+  background-position: right;
+}
+#chat .content #chatContent .right .msgCon .userinfo-nickname {
+  font-size: 22rpx;
+  line-height: 1;
+  color: #b4b4b4;
+  margin-bottom: 12rpx;
+  text-align: right;
+}
+#chat .content #chatContent .right .msgCon .myLuYin {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+#chat .content #chatContent .right .msgCon .myLuYin .audio {
+  height: 72rpx;
+  max-width: 220rpx;
+  padding: 0 30rpx;
+  background: #FF8000;
+  border-radius: 10px;
+  border: 1rpx solid #FF8000;
+  text-align: right;
+}
+#chat .content #chatContent .right .msgCon .myLuYin .audio .ico {
+  margin-top: 16rpx;
+  width: 31rpx;
+  height: 40rpx;
+}
+#chat .content #chatContent .right .msgCon .myLuYin .yyTxt {
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+  color: #999;
+  margin: 0 12rpx;
+  line-height: 2;
+}
+#chat .content #chatContent .right .msgCon .myMsg {
+  max-width: 60vw;
+  height: auto;
+  background: #FF8000;
+  border-radius: 10px;
+  border: 1rpx solid #FF8000;
+  padding: 16rpx 30rpx;
+  text-align: left;
+  display: flex;
+}
+#chat .content #chatContent .right .msgCon .myMsg .msgTxt {
+  font-size: 28rpx;
+  color: #fff;
+  word-break: break-all;
+}
+#chat .content #chatContent .right .msgCon .myImg {
+  width: 282rpx;
+  font-size: 28rpx;
+}
+#chat .content #chatContent .right .msgCon .myVideo {
+  width: 144rpx;
+  height: 144rpx;
+}
+#chat .tabbar {
+  flex-shrink: 0;
+  width: 100vw;
+  background: #ffffff;
+}
+#chat .tabbar .itemAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#chat .tabbar .itemAll .item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+}
+#chat .tabbar .itemAll .item image {
+  width: 50rpx;
+  height: 50rpx;
+}
+#chat .tabbar .itemAll .noSpeak {
+  margin: 0 auto;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  color: #888;
+}
+#chat .tabbar-by {
+  display: none;
+  background: #f5f5f7;
+  z-index: 66;
+}
+#chat .tabbar-by > view {
+  position: relative;
+  height: 248rpx;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+}
+#chat .tabbar-by > view.speak {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#chat .tabbar-by > view.speak .speakTit {
+  text-align: center;
+  font-size: 24rpx;
+  color: #888888;
+  margin-bottom: 26rpx;
+}
+#chat .tabbar-by > view.speak .speakImg {
+  width: calc(100vw - 48rpx);
+  height: 88rpx;
+}
+#chat .tabbar-by > view.img {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#chat .tabbar-by > view.img .item {
+  text-align: center;
+}
+#chat .tabbar-by > view.img .item .imgIcon {
+  width: 108rpx;
+  height: 108rpx;
+}
+#chat .tabbar-by > view.img .item .imgTxt {
+  font-size: 24rpx;
+  color: #888888;
+}
+#chat .tabbar-by > view.more {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#chat .tabbar-by > view.more .moreTxt {
+  font-size: 28rpx;
+  color: #666666;
+  margin-right: 40rpx;
+}
+#chat .tabbar-by > view.word {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 16rpx 24rpx;
+}
+#chat .tabbar-by > view.word .weui-textarea {
+  padding: 16rpx 24rpx;
+  flex: 1;
+  margin-right: 12rpx;
+  line-height: 40rpx;
+  min-height: 40rpx;
+  max-height: 184rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+  border: 2rpx solid #e8e8e8;
+  font-size: 28rpx;
+}
+#chat .tabbar-by > view.word .sendMordBtn {
+  background: #ff8000;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 36rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  padding: 0 40rpx;
+  margin: 0;
+}
+#chat .tabbar-by > view.word .sendMordBtn:after {
+  content: normal;
+}
+#chat .iphoneXbtn {
+  bottom: 0;
+  flex-shink: 0;
+  height: 68rpx;
+  width: 100%;
+  background: #fff;
+}
+#chat .show {
+  display: block;
+}
+#chat .hide {
+  display: none;
+}
+/*# sourceMappingURL=chat.wxss.map */

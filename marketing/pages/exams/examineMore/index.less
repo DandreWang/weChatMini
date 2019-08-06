@@ -1,0 +1,83 @@
+.examineMore {
+  .mainView {
+    height: 100vh;
+    padding: 0 32rpx;
+    box-sizing: border-box;
+    .item_li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32rpx 0;
+      position: relative;
+      box-sizing: border-box;
+      .item_right {
+        height: 146rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(100vw - 302rpx);
+        .item_title {
+          font-size: 30rpx;
+          color: #191919;
+          font-family: PingFangSC-Regular;
+          letter-spacing: 2rpx;
+        }
+        .item_time {
+          text-align: right;
+          color: #B4B4B4;
+          font-size: 22rpx;
+        }
+      }
+      .smlImg {
+        flex-shrink: 0;
+        width: 220rpx;
+        height: 136rpx;
+        border-radius: 8rpx;
+      }
+      &:after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        transform: scaleY(0.5);
+        background: rgba(226,226,226,.5);
+      }
+    }
+    .ovrTxt {
+      font-size: 28rpx;
+      color: #999;
+      text-align: center;
+      margin: 50rpx 0;
+    }
+    .header {
+      font-size:24rpx;
+      color:#b4b4b4;
+      text-align: center;
+      margin-top:10rpx;
+    }
+  }
+  .empBox {
+    margin-top: 32vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .empImg {
+      width: 325rpx;
+      height: 154rpx;
+    }
+    .empTxt {
+      margin-top: 42rpx;
+      font-size: 30rpx;
+      color: #B4B4B4;
+    }
+  }
+  .backTop {
+    position: fixed;
+    right: 50rpx;
+    bottom: 120rpx;
+    width: 140rpx;
+    height: 140rpx;
+  }
+}
